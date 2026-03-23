@@ -7,4 +7,5 @@ int main() {
     *p = 10;
     printf("%d\n", *p);
     // free(p);
+    return 0;
 }

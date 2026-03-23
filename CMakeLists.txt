@@ -6,10 +6,13 @@ project(ValgrindTestApp VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Find all .c files in the src directory and store them in a variable called 'SOURCES'
+file(GLOB SOURCES "src/*.c")
+
 # 3. Create the executable and point to the source files inside the 'src' folder
 # If you have more source files (e.g., src/math.cpp), add them to this list separated by spaces!
 add_executable(MyApp 
-    src/main.c
+    ${SOURCES}
 )
 
 # 4. Tell the compiler where to find your header files

@@ -1,0 +1,16 @@
+on:
+  workflow_call:
+
+jobs:
+  mem-check:
+    name: memory check
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v6.0.2
+
+      - name: build
+        run: gcc *.c -o app
+
+      - name: mem-check
+        run: valgrind --error-exitcode=1 --leak-check=full --errors-for-leak-kinds=definite ./app

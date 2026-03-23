@@ -1,0 +1,8 @@
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  valgrind:
+    uses: ./.github/workflows/valgrind.yaml

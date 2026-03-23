@@ -6,5 +6,5 @@ int main() {
     int *p = (int *)malloc(sizeof(int));
     *p = 10;
     printf("%d\n", *p);
-    free(p);
+    // free(p);
 }
